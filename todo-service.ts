@@ -1,3 +1,5 @@
+import start from './tracer';
+start('auth-service');
 import express from 'express';
 import axios from 'axios';
 const app = express();
