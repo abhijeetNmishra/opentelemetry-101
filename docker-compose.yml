@@ -7,6 +7,7 @@ services:
       dockerfile: dockerfile.todo-service
     volumes:
       - .:/usr/src/app:rw
+      - /usr/src/app/node_modules
     ports:
       - 8081:8080
   auth:
@@ -15,6 +16,7 @@ services:
       dockerfile: dockerfile.auth-service
     volumes:
       - .:/usr/src/app:rw
+      - /usr/src/app/node_modules
   redis:
     image: redis:latest
     ports:
